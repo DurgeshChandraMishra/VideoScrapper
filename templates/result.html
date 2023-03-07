@@ -27,16 +27,15 @@
          <th>Views </th>
          <th>Posted at</th>
       </tr>
-      {% i= 1 %}
          {% for data in scrapData %}
       <tr>
-          <td>{{i}}</td>
-         <td>{{data['vurl']}}</td>
-         <td>{{data['turl']}}</td>
+          <td>{{data['index']}}</td>
+         <td><a href="{{data['vurl']}}" target="_blank">{{data['vurl']}}</a></td>
+         <td><a href="{{data['turl']}}" target="_blank">{{data['turl']}}</a></td>
          <td>{{data['title']}}</td>
          <td>{{data['views']}} </td>
          <td>{{data['time']}} </td>
-         {% i+=1 %}
+      </tr>
        {% endfor %}
    </table>
 </div>
